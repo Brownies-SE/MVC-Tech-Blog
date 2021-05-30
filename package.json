@@ -20,7 +20,9 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "express-session": "^1.17.1",
+    "connect-session-sequelize": "^7.0.4"
   },
   "bugs": {
     "url": "https://github.com/Brownies-SE/MVC-Tech-Blog/issues"
