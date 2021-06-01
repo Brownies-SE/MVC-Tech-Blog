@@ -13,6 +13,7 @@ Using this Full Stack application, a user can navigate through this blog applica
 
 # Installation
 
+- `To visot click here: https://pacific-waters-12030.herokuapp.com/`
 - `First git clone this repo using git clone https://github.com/Brownies-SE/MVC-Tech-Blog`
 - `Navigate to the directory you cloned to`
 - `Use npm i to install all the necessary dependencies`
