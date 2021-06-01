@@ -23,7 +23,7 @@ Using this Full Stack application, a user can navigate through this blog applica
 
 This project is used to create a full stack application. It uses CRUD routes to accomplish its tasks
 
-<img src = >
+<img src = https://raw.githubusercontent.com/Brownies-SE/MVC-Tech-Blog/main/img/Capture.PNG>
 
 # License
 
