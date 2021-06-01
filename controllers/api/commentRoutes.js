@@ -15,4 +15,5 @@ router.post("/:post_id", async (req, res) => {
     res.redirect("/login");
   }
 });
+
 module.exports = router;

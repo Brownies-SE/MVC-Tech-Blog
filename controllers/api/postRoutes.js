@@ -28,4 +28,55 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get("/:id", async (req, res) => {
+  try {
+    const data = await Post.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [{ model: User }],
+    });
+
+    if (!data) {
+      res.status(404).json({ message: "No post found with that Id" });
+      return;
+    }
+    res.json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.put("/:id", async (req, res) => {
+  try {
+    const data = await Post.update(
+      {
+        title: req.body.title,
+        post_text: req.body.post_text,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    if (!data) {
+      res.status(404).json({ message: "No post found with that Id" });
+      return;
+    }
+    res.json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//Needs more
+// router.delete("/:id", async (req, res) => {
+//   const data = await Post.findOne({
+//     where: { id: req.params.id },
+//     include: { model: Comment },
+//   });
+// });
+
 module.exports = router;
