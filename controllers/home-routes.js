@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
     }
     const data = allData.map((dataSet) => dataSet.get({ plain: true }));
     console.log(data);
+    console.log(req.session);
     res.render("home", { data, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
@@ -25,6 +26,10 @@ router.get("/login", (req, res) => {
   }
   // Otherwise, render the 'login' template
   res.render("login");
+});
+
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 
 module.exports = router;

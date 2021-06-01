@@ -58,4 +58,14 @@ User.init(
   }
 );
 
+User.beforeBulkCreate((users, options) => {
+  for (const user of users) {
+    const { password } = user;
+
+    var saltRounds = 10;
+    var salt = bcrypt.genSaltSync(saltRounds);
+    var hash = bcrypt.hashSync(password, salt);
+    user.password = hash;
+  }
+});
 module.exports = User;

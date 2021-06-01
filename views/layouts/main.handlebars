@@ -11,19 +11,20 @@
     />
     <title>Tech Blog</title>
   </head>
-  <h1>Tech Blog</h1>
-  <header>
-
-    <ul class="nav justify-content-end" style="height: 120px;">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
-      </li>
-    </ul>
-
-  </header>
+ <!-- As a link -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <a class="navbar-brand" href="/dashboard">Dashboard</a>
+    {{#if loggedIn}}
+    <a class="navbar-brand" href="/api/users/logout">Logout</a>
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+    <a class="navbar-brand" href="/login">Login</a>
+    {{/if}}
+  </div>
+</nav>
+  </nav>
   <body>
     {{{body}}}
   </body>

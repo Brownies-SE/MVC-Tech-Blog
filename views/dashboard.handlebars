@@ -1,0 +1,41 @@
+<div class="container text-light">
+    <section class="newPost">
+      <h2 class="text-dark">Create New Post</h2>
+        <form class="new-post-form">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                </div>
+                <input id="post-title" type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" name="post-title" maxlength="50">
+            </div>
+
+            <div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Body</span>
+                    </div>
+                    <textarea id="post-text" class="form-control" aria-label="With textarea"
+                        name="post-text" maxlength="255"></textarea>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary text-light create">Create</button>
+        </form>
+    </section>
+
+{{#each allData as |post|}}
+  <div
+    class="card border-dark mb-3 col-lg-4 col =lg-offset"
+    style="max-width: 50rem;"
+  >
+    <div class="card-header text-dark">{{post.title}}</div>
+    <div class="card-body text-dark">
+      <p class="card-text">{{post.post_text}}</p>
+    </div>
+  </div>
+{{/each}}
+
+
+<script src="/js/createPost.js"></script>
