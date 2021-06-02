@@ -1,5 +1,5 @@
 <form class="login-form">
-  <div class="form-group">
+  <div class="form-group m-3">
     <label for="exampleInputEmail1">Email address</label>
     <input
       type="email"
@@ -11,7 +11,7 @@
     <small id="emailHelp" class="form-text text-muted">We'll never share your
       email with anyone else.</small>
   </div>
-  <div class="form-group">
+  <div class="form-group m-3">
     <label for="exampleInputPassword1">Password</label>
     <input
       type="password"
@@ -20,13 +20,16 @@
       placeholder="Password"
     />
   </div>
-  <button type="submit" class="btn btn-primary" id="login">Submit</button>
-
+  <div class="d-flex justify-content-center mt-2">
+    <button type="submit" class="btn btn-primary" id="login">Submit</button>
+  </div>
 </form>
-<a href="/signup"><button
-    type="submit"
-    class="btn btn-primary"
-    id="sign-up"
-  >Signup</button></a>
+<div class="d-flex justify-content-center mt-2">
+  <a href="/signup"><button
+      type="submit"
+      class="btn btn-primary"
+      id="sign-up"
+    >Signup</button></a>
+</div>
 
 <script src="/js/login.js"></script>
