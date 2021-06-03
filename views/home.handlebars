@@ -1,4 +1,5 @@
 {{! //Something }}
+<h2 class="text-dark text-center mt-2">Current Posts</h2>
 {{#each data as |post|}}
 
   <div class="row justify-content-center mt-5">
@@ -7,9 +8,14 @@
       style="max-width: 50rem;"
       id="post-card"
     >
-      <div class="card-header text-center">{{post.title}}</div>
+      <div class="card-header text-center">
+        <a href="/postLayout/{{post.id}}">{{post.title}}</a>
+      </div>
       <div class="card-body text-dark">
-        <p class="card-text text-center">{{post.post_text}}</p>
+        <p class="card-text text-center">{{post.post_text}}
+          By:
+          {{post.user.username}}
+        </p>
       </div>
     </div>
   </div>
