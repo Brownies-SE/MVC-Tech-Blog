@@ -1,13 +1,28 @@
 {{title}}
 <br />
-{{#each comments}}
-  {{comment_text}}
-  By:
-  {{user.username}}
-{{/each}}
+
 <br />
-<textarea name="textarea" id="comment" cols="30" rows="10"></textarea>
+<textarea
+  name="textarea"
+  id="comment"
+  cols="15"
+  rows="5"
+  class="form-control"
+></textarea>
 
 <button id="addComment">Add Comment</button>
-
+<br />
+{{#each comments}}
+  <div class="row justify-content-center mt-5">
+    <div
+      class="card border-dark mb-3 col-lg-4 col =lg-offset"
+      style="max-width: 50rem;"
+    >
+      <div class="card-header text-dark text-center">{{user.username}}</div>
+      <div class="card-body text-dark text-center">
+        <p class="card-text">{{comment_text}}</p>
+      </div>
+    </div>
+  </div>
+{{/each}}
 <script src="/js/comment.js"></script>
